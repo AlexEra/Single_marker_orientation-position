@@ -25,7 +25,6 @@ def detect_show_marker(img, gray, aruco_dict, parameters, cameraMatrix, distCoef
     if (distance is not None):
         cv2.putText(img, 'Id' + str(id_aruco) + ' %.2fsm' % (distance * 100), (0, 64), font, 1, (0, 255, 0), 2,
                     cv2.LINE_AA)
-        cv2.imwrite('img.png', img)
     return cv2.imshow('frame', img) # final img
 
 
