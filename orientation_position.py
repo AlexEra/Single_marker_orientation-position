@@ -33,7 +33,7 @@ def detect_show_marker(img, gray, aruco_dict, parameters, cameraMatrix,
                 # Reverse orientation camera to the aruco.
                 angles2 = rotmtx_to_euler_angles(cam_rotmtx) 
     if (distance is not None):
-        cv2.putText(img, 'Id' + str(id_aruco) + ' %.2fsm' % (distance * 100), (0, 64), font, 
+        cv2.putText(img, 'Id' + str(id_aruco) + ' %.2fsm' % (distance*100), (0, 64), font, 
                     1, (0, 255, 0), 2, cv2.LINE_AA)
     return cv2.imshow('frame', img) # Final img.
 
